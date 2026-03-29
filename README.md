@@ -1,11 +1,17 @@
-# template-eng
+# template_eng
 
-Simple template engine with variables, loops, and conditionals.
+Simple template engine with variable substitution and loops
+
+Single-file, zero-dependency Python CLI tool.
 
 ## Usage
 
 ```bash
-python3 template_eng.py test
+python template_eng.py --help
 ```
 
-Zero dependencies. Python 3.8+.
+## Test
+
+```bash
+python -c "import template_eng; template_eng.test()"
+```
