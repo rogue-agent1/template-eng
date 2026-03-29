@@ -4,12 +4,12 @@ import re, sys
 
 def render(template, context):
     result = template
-    # Variable substitution {{ var }}
-    result = re.sub(r"\{\{\s*(.+?)\s*\}\}", lambda m: _eval_expr(m.group(1), context), result)
     # For loops {% for x in items %}...{% endfor %}
     result = _process_for(result, context)
     # If blocks {% if cond %}...{% endif %}
     result = _process_if(result, context)
+    # Variable substitution {{ var }}
+    result = re.sub(r"\{\{\s*(.+?)\s*\}\}", lambda m: _eval_expr(m.group(1), context), result)
     return result
 
 def _eval_expr(expr, ctx):
