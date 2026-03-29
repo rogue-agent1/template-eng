@@ -1,17 +1,9 @@
-# template_eng
+# template-eng
 
-Simple template engine with variable substitution and loops
-
-Single-file, zero-dependency Python CLI tool.
+Simple template engine (Jinja-like). Zero dependencies, single file, Python 3.8+.
 
 ## Usage
 
 ```bash
-python template_eng.py --help
-```
-
-## Test
-
-```bash
-python -c "import template_eng; template_eng.test()"
+python3 template_eng.py --help
 ```
